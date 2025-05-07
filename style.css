@@ -13,6 +13,25 @@ html {
     align-items: center;
 }
 
+#nav-main-txt {
+  font-size: 12px;
+  font-weight: 500;
+}
+.right-header a {
+  text-decoration: none;
+}
+
+.right-header a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.header-txt {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -32,11 +51,6 @@ html {
     gap: 24px;
 }
 
-.header-txt {
-    font-size: 14px;
-    font-weight: 500;
-
-}
 
 #sleep-img {
     height: auto;
@@ -84,13 +98,15 @@ html {
 
 .reason-head-txt {
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 32px;
 }
 
 .reason-sub-txt {
+  text-align: center;
     font-size: 26px;
     line-height: 1.5;
-    letter-spacing: -.01em;
+    letter-spacing: 0;
+    max-width: 50%;
 }
 
 .marquee-container {
@@ -159,3 +175,58 @@ html {
     display: flex;
     justify-content: flex-end;
   }
+
+  .image-container-with-text {
+    position: relative;
+    display: inline-block;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.image-container-with-text img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.image-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.image-text-overlay h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.image-text-overlay p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.image-container-with-text:hover .image-text-overlay {
+    opacity: 1;
+}
+
+.image-container-with-text:hover img {
+    filter: blur(3px); /* Apply a blur effect to the image on hover */
+    transform: scale(1.05);
+}
