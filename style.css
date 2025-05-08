@@ -231,3 +231,10 @@ html {
     filter: blur(3px); /* Apply a blur effect to the image on hover */
     transform: scale(1.05);
 }
+
+
+
+footer {
+  background: #120633;
+  color: white;
+}
