@@ -238,3 +238,14 @@ footer {
   background: #120633;
   color: white;
 }
+
+.social-links {
+  display: flex;
+  padding: 0;
+  gap: 20px;
+}
+
+.social-links li {
+  list-style: none;
+  margin-top: 64px;
+}
