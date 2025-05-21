@@ -1,0 +1,272 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+#nav-main-txt {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.right-header a {
+  text-decoration: none;
+}
+
+.right-header a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.header-txt {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 40px 20px;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+
+#sleep-img {
+    height: auto;
+    width: 30px;
+}
+
+.container-body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1640px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media (max-width: 768px) {
+  .container-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-content-left {
+    width: 50%;
+}
+
+.container-content-right {
+    width: 50%;
+    overflow: visible;
+    height: 800px;
+}
+
+.main-txt {
+    font-size: 80px;
+}
+
+.sub-txt {
+    font-size: 26px;
+    margin-top: 100px;
+}
+#img1 {
+    height: auto;
+    width: 500px;
+}
+
+.container-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.reason-head-txt {
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+
+.reason-sub-txt {
+  text-align: center;
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    max-width: 50%;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 40px 0;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .marquee {
+    display: flex;
+    gap: 100px; /* space between image groups */
+    animation: scroll-left 120s linear infinite;
+    align-items: center;
+  }
+
+  .marquee img {
+    height: 60px;
+  }
+
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  #icon {
+    height: auto;
+    width: 100px;
+  }
+
+  .wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .action-main-txt {
+    font-size: 55px;
+    line-height: 1.0;
+  }
+
+  .action-row-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .video {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0 24px 24px 0;
+
+  }
+
+  #video {
+    height: auto;
+    width: 50%;
+  }
+
+  .video-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .image-container-with-text {
+    position: relative;
+    display: inline-block;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.image-container-with-text img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.image-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.image-text-overlay h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.image-text-overlay p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.image-container-with-text:hover .image-text-overlay {
+    opacity: 1;
+}
+
+.image-container-with-text:hover img {
+    filter: blur(3px); /* Apply a blur effect to the image on hover */
+    transform: scale(1.05);
+}
+
+footer {
+  background: #120633;
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  padding: 0;
+  gap: 20px;
+}
+
+.social-links li {
+  list-style: none;
+  margin-top: 64px;
+}
+
+/* 3d model type stuff */
+/* rararara */
+#container3D {
+  position: relative;
+  height: 600px;
+  width: 120%;
+  overflow: visible;
+}
