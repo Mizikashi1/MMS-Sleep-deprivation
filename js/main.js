@@ -51,6 +51,7 @@ const container3D = document.getElementById("container3D");
 const width = container3D.clientWidth;
 const height = container3D.clientHeight;
 
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(width, height);
 
 //Add the renderer to the DOM
@@ -119,6 +120,7 @@ window.addEventListener("resize", function () {
   const height = container3D.clientHeight;
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(width, height);
 });
 
