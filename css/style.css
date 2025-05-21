@@ -18,13 +18,62 @@ html {
   font-weight: 500;
   margin-left: 10px;
 }
-.right-header a {
-  text-decoration: none;
+
+.nav-button {
+  display: inline-block;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
 }
 
-.right-header a:hover {
-  text-decoration: underline;
+.nav-button a {
+  text-decoration: none;
   color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-button a .header-txt,
+.nav-button a i {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover a .header-txt,
+.nav-button:hover a i {
+  color: #B497BD;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 24px;
+  gap: 10px;
+}
+
+button{
+  border-radius: 20rem;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid black;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-main-1 button{
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  color: white;
+  background-color: black;
+}
+
+.button-main-1 button:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .header-txt {
@@ -78,14 +127,16 @@ html {
 .row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .container-content-left {
-    width: 50%;
+    max-width: 50%;
+    overflow: visible;
 }
 
 .container-content-right {
-    width: 50%;
+    max-width: 50%;
     overflow: visible;
     height: 800px;
 }
@@ -269,4 +320,18 @@ footer {
   height: 600px;
   width: 120%;
   overflow: visible;
+}
+
+h3 {
+  max-width: 20em;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.container-body h1 {
+  text-align: center; 
+  margin-top: 100px; 
+  border-top: 1px solid #c7c7cc;
 }
