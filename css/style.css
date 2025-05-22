@@ -136,13 +136,14 @@ button:hover {
 }
 
 .container-content-right {
-    max-width: 50%;
+    width: 50%;
     overflow: visible;
     height: 800px;
 }
 
 .main-txt {
     font-size: 80px;
+    margin-top: 80px;
 }
 
 .sub-txt {
@@ -317,9 +318,12 @@ footer {
 /* rararara */
 #container3D {
   position: relative;
-  height: 600px;
-  width: 120%;
+  height: 100%;
+  width: 100%;
   overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h3 {
@@ -330,7 +334,7 @@ h3 {
   line-height: 1.2;
 }
 
-.container-body h1 {
+#footer-txt {
   text-align: center; 
   margin-top: 100px; 
   border-top: 1px solid #c7c7cc;
