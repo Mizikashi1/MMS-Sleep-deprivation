@@ -64,7 +64,7 @@ if (window.innerWidth < 768) {
   camera.position.z = 5;
   camera.position.x = 0;
 } else {
-  camera.position.z = 4.7;
+  camera.position.z = 4.8;
   camera.position.x = 0;
 }
 camera.position.y = 2;
@@ -101,13 +101,13 @@ scene.add(frontLight);
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
 if (objToRender === "drone") {
   controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = false;
+  controls.enableZoom = true; // Enabled zoom
   controls.target.set(0, 0, 0);
 }
 
 if (objToRender === "panda") {
   controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = false;
+  controls.enableZoom = false; // Enabled zoom
 }
 
 //Render the scene
@@ -115,7 +115,7 @@ function animate() {
   requestAnimationFrame(animate);
   //Here we could add some code to update the scene, adding some automatic movement
   if (object) {
-    object.rotation.y -= 0.001;
+    object.rotation.y += 0.001;
   }
 
   //Make the eye move
