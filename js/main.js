@@ -21,7 +21,7 @@ let object;
 let controls;
 
 //Set which object to render
-let objToRender = 'drone';
+let objToRender = 'panda';
 
 //Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
@@ -60,9 +60,14 @@ container3D.appendChild(renderer.domElement);
 //Set how far the camera will be from the 3D model
 camera.aspect = width / height;
 camera.updateProjectionMatrix();
-camera.position.z = 50;
-camera.position.y = 0;
-camera.position.x = 0;
+if (window.innerWidth < 768) {
+  camera.position.z = 5;
+  camera.position.x = 0;
+} else {
+  camera.position.z = 4.7;
+  camera.position.x = 0;
+}
+camera.position.y = 2;
 
 //Add lights to the scene, so we can actually see the 3D model
 const topLight = new THREE.DirectionalLight(0xdddddd, 0.5); // (color, intensity)
@@ -100,7 +105,7 @@ if (objToRender === "drone") {
   controls.target.set(0, 0, 0);
 }
 
-if (objToRender === "duck") {
+if (objToRender === "panda") {
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableZoom = false;
 }
