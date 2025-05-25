@@ -302,6 +302,9 @@ html {
   }
 
   .stats-container a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-decoration: none;
     color: white;
   }
@@ -655,6 +658,18 @@ h3 {
     padding-right: 20px;
   }
 
+  .stat-card, .stat-text {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .stat-number {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+      color: #fdcb6e;
+    }
+
   /* first sectrion */
   .row {
       flex-direction: column;
@@ -683,7 +698,7 @@ h3 {
 
   .action-text,
   .action-image {
-    flex: unset;
+    flex: 0 1 auto;  
     width: 100%;
   }
 
@@ -739,5 +754,5 @@ h3 {
     margin-bottom: 10px;
     text-align: center;
   }
-
+  
 }
