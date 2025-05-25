@@ -70,7 +70,7 @@ html {
   display: none;
 }
 
-.btn-primary {
+.button-primary {
   background: #6c5ce7;
   color: white;
   border: none;
@@ -83,13 +83,13 @@ html {
   box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
 }
 
-.btn-primary:hover {
+.button-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(108, 92, 231, 0.4);
   background: #5a4fcf;
 }
 
-.btn-secondary {
+.button-secondary {
   background: transparent;
   color: #5a4fcf;
   border: 2px solid #5a4fcf;
@@ -100,7 +100,7 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.btn-secondary:hover{
+.button-secondary:hover{
   background: #5a4fcf;
   color: white;
   transform: translateY(-3px);
@@ -257,14 +257,61 @@ html {
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }
   }
+/* Stats stuff */
 
+.stats-section {
+    background: linear-gradient(135deg, #2c1810 0%, #4a3c5a 100%);
+    padding: 100px 0;
+    color: white;
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+  .stat-card:hover {
+    transform: translateY(-10px);
+    .stat-number {
+      color: #fdcb6e;
+    }
+  }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .stat-text {
+    font-size: 18px;
+    opacity: 0.9;
+  }
+
+  .stats-container a {
+    text-decoration: none;
+    color: white;
+  }
 /* Action cards type shi */
 .action-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #f2f3f7 0%, #ffffff 100%);
   }
 
-  .action-section:nth-child(even) {
+  .mid {
     background: #ffffff;
   }
 
@@ -465,9 +512,110 @@ h3 {
 }
 
 #about-us {
-  background: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
-  overflow: visible; /* Ensure content is not clipped */
-  padding: 100px 0; /* Add padding similar to other sections */
+  background: rgba(255, 255, 255, 0.8);
+  overflow: visible;
+  padding: 100px 0;
+}
+
+/* Resources section only*/
+.resources-section {
+  padding: 80px 0;
+  background: #f8f9ff;
+}
+
+.resource-main-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #2c1810;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.resource-main-description {
+  text-align: center;
+  font-size: 18px;
+  color: #636e72;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resource-container {
+  display: flex;
+  padding: 40px 20px;
+  flex: 1;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.resource-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(44, 24, 16, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  max-width: 40%;
+}
+
+.resource-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(44, 24, 16, 0.15);
+  border-color: #667eea;
+}
+
+.resource-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.resource-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c1810;
+  margin-bottom: 15px;
+}
+
+.resource-description {
+  color: #636e72;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.resource-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #636e72;
+}
+
+.resource-type {
+  background: #667eea;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rb1 {
+  font-size: 14px;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-right: 5px;
 }
 
 /* responsiveness type sh */
@@ -572,6 +720,24 @@ h3 {
     left: 0;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .resource-card {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .resource-container {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .rb1 {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
 }
